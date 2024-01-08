@@ -13,19 +13,58 @@
 <body>
     <header>
         <div>
-            <a><button onmouseover="foto('docker')" onmouseleave="foto()" onclick="transicionar('docker')"  class="docker">Docker</button></a>
-            <a href="git.html" ><button onmouseover="foto('git')" onmouseleave="foto()" onclick="transicionar('git')" class="git">Git</button></a>
+            <a><button onclick="foto('docker')" class="docker">Docker</button></a>
+            <a><button onclick="foto('git')" class="git">Git</button></a>
         </div>
-        <button >ASDDAS</button>
     </header>
     <main>
-        <section>
-            <h1 id="textoCentral">Mal aventurados sean a la cuesta de enero</h1>
-            <img id="imagenCentral" src="images/cuesta.jpg" alt="">
+        <section class="intro">
+            <div>
+                <h1 id="textoCentral">Malaventurados sean a la cuesta de enero</h1>
+                <img id="imagenCentral" src="images/cuesta.jpg" alt="">
+            </div>
+            <div>
+                <img class="flexa" hidden src="images/flexa.png" alt="">
+            </div>
         </section>
+        <article hidden class="datacion">
+            <h1>Git</h1>
+            <section class="descripcion">
+                <p>
+                    Git es un sistema de control de versiones distribuido que facilita el seguimiento de los cambios
+                    en el código fuente durante el desarrollo de software.
+                </p>
+            </section>
+            <section class="para-que-sirve">
+                <h2>¿Para qué sirve Git?</h2>
+                <p>
+                    Git se utiliza para gestionar el control de versiones de proyectos de software. Permite a los
+                    desarrolladores colaborar de manera eficiente, realizar un seguimiento de los cambios, y revertir a
+                    versiones anteriores si es necesario.
+                </p>
+            </section>
+            <section class="herramientas-que-lo-utilizan">
+                <h2>Herramientas que utilizan Git</h2>
+                <ul>
+                    <a href="https://github.com"></a><li>GitHub</li></a>
+                    <li>GitLab</li>
+                    <li>Bitbucket</li>
+                    <li>SourceTree</li>
+                    <!-- Añade más herramientas según sea necesario -->
+                </ul>
+            </section>
+            <section class="glunglan">
+                <h2>Datación de la información</h2>
+                <p>
+                    La información sobre Git se actualiza regularmente para incluir las últimas características,
+                    mejores prácticas y herramientas que evolucionan con el tiempo. Es importante estar al tanto de
+                    las actualizaciones para aprovechar al máximo las capacidades de Git en tu flujo de trabajo.
+                </p>
+            </section>
+        </article>
     </main>
-    <footer>
-
+    <footer hidden>
+        <a href="#"><button>Subamos la cuesta de enero</button></a>
     </footer>
 </body>
 

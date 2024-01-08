@@ -1,6 +1,6 @@
 
 function foto(imagen) {
-
+    document.querySelector(".datacion").removeAttribute("hidden")
     if (imagen === "docker") {
         imagenCentral.src = "images/docker.png"
         imagenCentral.classList.add("animacion");
@@ -9,23 +9,30 @@ function foto(imagen) {
         imagenCentral.src = "images/git.png"
         imagenCentral.classList.add("animacion");
         textoCentral.innerHTML = "Información sobre git"
-    } else {
-        textoCentral.innerHTML = "Mal aventurados sean a la cuesta de enero"
-        imagenCentral.src = "images/cuesta.jpg"
-        imagenCentral.classList.remove("animacion");
     }
+
+  let imagenFlexa = document.querySelector('.flexa');
+  imagenFlexa.style.animation = 'desvanecer 0.5s ease';
+  ajustarFooter();
+  setTimeout(function () {
+    imagenFlexa.style.animation = 'aparecerDesdeArriba 1s ease';
+    imagenFlexa.style.display = 'block';
+    imagenFlexa.classList.remove('oculto');
+  }, 500); 
 }
 
-function transicionar(destino) {
-    imagenCentral.classList.add("transicion");
-    imagenCentral.src = "images/espiral1.jpg"
-        setTimeout(cambiar(destino), 3000);
-}
+function ajustarFooter() {
+    let contenido = document.querySelector('main');
+    let footer = document.querySelector('footer');
+    footer.removeAttribute("hidden");
 
-function cambiar(destino){
-    if (destino === "docker") {
-        setTimeout(window.location.href = "docker.html", 3000);
+    let alturaContenido = contenido.clientHeight;
+    let alturaVentana = window.innerHeight;
+
+    if (alturaContenido < alturaVentana) {
+        footer.style.position = 'fixed';
+        footer.style.bottom = '0';
     } else {
-        setTimeout(window.location.href = "git.html", 2000);
+        footer.style.position = 'static';
     }
 }
